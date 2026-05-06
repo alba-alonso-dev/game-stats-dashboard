@@ -1,0 +1,28 @@
+<div class="cr-panel">
+  <div class="cr-panel__header">
+    <h2 class="cr-panel__title">Radar Overlay</h2>
+    <p class="cr-panel__subtitle">Percentile profile — all axes 0–100th</p>
+  </div>
+
+  <div class="cr-panel__legend">
+    <span class="cr-legend cr-legend--a">
+      <span class="cr-legend__dot"></span>
+      {{ playerA().name }}
+    </span>
+    <span class="cr-legend cr-legend--b">
+      <span class="cr-legend__dot"></span>
+      {{ playerB().name }}
+    </span>
+  </div>
+
+  <div class="cr-panel__chart">
+    <canvas #canvas aria-label="Radar chart comparing two player profiles"></canvas>
+  </div>
+
+  <div class="cr-panel__axes">
+    <span class="cr-axis-note">
+      Axes show percentile rank vs all {{ 'detectives' }}.
+      <strong>Discretion</strong> = inverse hidden rate (higher = less secretive).
+    </span>
+  </div>
+</div>

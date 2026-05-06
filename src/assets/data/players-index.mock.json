@@ -1,123 +1,8 @@
 {
   "meta": {
-    "version": "1.2.0",
+    "version": "2.0.0",
     "totalPlayers": 25,
-    "note": "Multi-player index — all data fictional"
-  },
-  "aggregateStats": {
-    "totalPlayers": 25,
-    "avgSessionDuration": 4105,
-    "medianSessionDuration": 4056,
-    "stdDevSessionDuration": 1070,
-    "avgNotebookCompletion": 76.0,
-    "medianNotebookCompletion": 74.5,
-    "avgReputation": 69.1,
-    "medianReputation": 66,
-    "avgLiesDiscovered": 8.3,
-    "avgCluesFound": 14.1,
-    "hiddenDecisionRate": 0.4,
-    "revealedDecisionRate": 0.6,
-    "dropoutRate": 16.0,
-    "dropoutCount": 4,
-    "finalDistribution": {
-      "A": 40,
-      "B": 37,
-      "C": 14,
-      "D": 7
-    },
-    "caseCompletionRate": {
-      "case_01": 1.0,
-      "case_02": 1.0,
-      "case_03": 0.92,
-      "case_04": 0.84
-    },
-    "correlations": {
-      "hiddenDecisions_vs_reputation": 0.34,
-      "notebookCompletion_vs_accuracy": 0.71,
-      "sessionDuration_vs_notebookPct": 0.58,
-      "liesDiscovered_vs_finalGrade": 0.62,
-      "cluesFound_vs_murdererCorrect": 0.49
-    },
-    "reputationDistribution": [
-      {
-        "bin": "21-40",
-        "count": 1
-      },
-      {
-        "bin": "41-60",
-        "count": 7
-      },
-      {
-        "bin": "61-80",
-        "count": 11
-      },
-      {
-        "bin": "81-100",
-        "count": 6
-      }
-    ],
-    "notebookDistribution": [
-      {
-        "bin": "0-60",
-        "count": 1
-      },
-      {
-        "bin": "61-70",
-        "count": 7
-      },
-      {
-        "bin": "71-80",
-        "count": 7
-      },
-      {
-        "bin": "81-90",
-        "count": 7
-      },
-      {
-        "bin": "91-100",
-        "count": 3
-      }
-    ],
-    "sessionDurationDistribution": [
-      {
-        "bin": "30-45m",
-        "count": 3
-      },
-      {
-        "bin": "45-60m",
-        "count": 4
-      },
-      {
-        "bin": "60-90m",
-        "count": 13
-      },
-      {
-        "bin": ">90m",
-        "count": 5
-      }
-    ],
-    "playStyleSegments": [
-      {
-        "segment": "Balanced",
-        "count": 9,
-        "description": "Average across all metrics"
-      },
-      {
-        "segment": "Completionist",
-        "count": 6,
-        "description": "High notebook %, long sessions"
-      },
-      {
-        "segment": "Manipulator",
-        "count": 5,
-        "description": "High hidden decision rate"
-      },
-      {
-        "segment": "Speedrunner",
-        "count": 5,
-        "description": "Short sessions, correct reports"
-      }
-    ]
+    "note": "Source of truth: players[]. All stats (playStyle, isOutlier, percentiles, aggregateStats) computed reactively by AnalyticsService. Do NOT add computed fields here."
   },
   "players": [
     {
@@ -131,16 +16,8 @@
       "notebookAvg": 85.2,
       "hiddenDecisionRate": 0.31,
       "liesDiscovered": 12,
-      "playStyle": "Completionist",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 83,
-        "accuracy": 55,
-        "notebookCompletion": 75,
-        "sessionEfficiency": 30
-      },
-      "dataFile": "player_001.mock.json"
+      "dataFile": "player_001.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_002",
@@ -153,16 +30,8 @@
       "notebookAvg": 66.8,
       "hiddenDecisionRate": 0.21,
       "liesDiscovered": 8,
-      "playStyle": "Speedrunner",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 57,
-        "accuracy": 57,
-        "notebookCompletion": 44,
-        "sessionEfficiency": 82
-      },
-      "dataFile": "player_002.mock.json"
+      "dataFile": "player_002.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_003",
@@ -175,16 +44,8 @@
       "notebookAvg": 72.0,
       "hiddenDecisionRate": 0.59,
       "liesDiscovered": 3,
-      "playStyle": "Balanced",
-      "isOutlier": false,
-      "isDrop": true,
-      "percentiles": {
-        "reputation": 73,
-        "accuracy": 80,
-        "notebookCompletion": 53,
-        "sessionEfficiency": 59
-      },
-      "dataFile": "player_003.mock.json"
+      "dataFile": "player_003.mock.json",
+      "abandoned": true
     },
     {
       "id": "player_004",
@@ -197,16 +58,8 @@
       "notebookAvg": 66.5,
       "hiddenDecisionRate": 0.18,
       "liesDiscovered": 8,
-      "playStyle": "Speedrunner",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 52,
-        "accuracy": 44,
-        "notebookCompletion": 44,
-        "sessionEfficiency": 85
-      },
-      "dataFile": "player_004.mock.json"
+      "dataFile": "player_004.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_005",
@@ -219,16 +72,8 @@
       "notebookAvg": 89.2,
       "hiddenDecisionRate": 0.33,
       "liesDiscovered": 12,
-      "playStyle": "Completionist",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 43,
-        "accuracy": 38,
-        "notebookCompletion": 82,
-        "sessionEfficiency": 28
-      },
-      "dataFile": "player_005.mock.json"
+      "dataFile": "player_005.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_006",
@@ -241,16 +86,8 @@
       "notebookAvg": 63.8,
       "hiddenDecisionRate": 0.19,
       "liesDiscovered": 8,
-      "playStyle": "Speedrunner",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 73,
-        "accuracy": 90,
-        "notebookCompletion": 39,
-        "sessionEfficiency": 81
-      },
-      "dataFile": "player_006.mock.json"
+      "dataFile": "player_006.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_007",
@@ -263,16 +100,8 @@
       "notebookAvg": 95.5,
       "hiddenDecisionRate": 0.28,
       "liesDiscovered": 12,
-      "playStyle": "Completionist",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 57,
-        "accuracy": 72,
-        "notebookCompletion": 92,
-        "sessionEfficiency": 33
-      },
-      "dataFile": "player_007.mock.json"
+      "dataFile": "player_007.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_008",
@@ -285,16 +114,8 @@
       "notebookAvg": 80.7,
       "hiddenDecisionRate": 0.45,
       "liesDiscovered": 5,
-      "playStyle": "Balanced",
-      "isOutlier": false,
-      "isDrop": true,
-      "percentiles": {
-        "reputation": 82,
-        "accuracy": 98,
-        "notebookCompletion": 67,
-        "sessionEfficiency": 60
-      },
-      "dataFile": "player_008.mock.json"
+      "dataFile": "player_008.mock.json",
+      "abandoned": true
     },
     {
       "id": "player_009",
@@ -307,16 +128,8 @@
       "notebookAvg": 64.2,
       "hiddenDecisionRate": 0.18,
       "liesDiscovered": 8,
-      "playStyle": "Balanced",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 43,
-        "accuracy": 28,
-        "notebookCompletion": 40,
-        "sessionEfficiency": 79
-      },
-      "dataFile": "player_009.mock.json"
+      "dataFile": "player_009.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_010",
@@ -329,16 +142,8 @@
       "notebookAvg": 87.5,
       "hiddenDecisionRate": 0.27,
       "liesDiscovered": 12,
-      "playStyle": "Completionist",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 55,
-        "accuracy": 48,
-        "notebookCompletion": 79,
-        "sessionEfficiency": 21
-      },
-      "dataFile": "player_010.mock.json"
+      "dataFile": "player_010.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_011",
@@ -351,16 +156,8 @@
       "notebookAvg": 80.2,
       "hiddenDecisionRate": 0.52,
       "liesDiscovered": 8,
-      "playStyle": "Balanced",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 81,
-        "accuracy": 70,
-        "notebookCompletion": 67,
-        "sessionEfficiency": 62
-      },
-      "dataFile": "player_011.mock.json"
+      "dataFile": "player_011.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_012",
@@ -373,16 +170,8 @@
       "notebookAvg": 59.7,
       "hiddenDecisionRate": 0.26,
       "liesDiscovered": 5,
-      "playStyle": "Balanced",
-      "isOutlier": false,
-      "isDrop": true,
-      "percentiles": {
-        "reputation": 50,
-        "accuracy": 48,
-        "notebookCompletion": 32,
-        "sessionEfficiency": 77
-      },
-      "dataFile": "player_012.mock.json"
+      "dataFile": "player_012.mock.json",
+      "abandoned": true
     },
     {
       "id": "player_013",
@@ -395,16 +184,8 @@
       "notebookAvg": 74.5,
       "hiddenDecisionRate": 0.77,
       "liesDiscovered": 3,
-      "playStyle": "Manipulator",
-      "isOutlier": false,
-      "isDrop": true,
-      "percentiles": {
-        "reputation": 56,
-        "accuracy": 47,
-        "notebookCompletion": 57,
-        "sessionEfficiency": 53
-      },
-      "dataFile": "player_013.mock.json"
+      "dataFile": "player_013.mock.json",
+      "abandoned": true
     },
     {
       "id": "player_014",
@@ -417,16 +198,8 @@
       "notebookAvg": 81.2,
       "hiddenDecisionRate": 0.27,
       "liesDiscovered": 8,
-      "playStyle": "Balanced",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 65,
-        "accuracy": 50,
-        "notebookCompletion": 68,
-        "sessionEfficiency": 27
-      },
-      "dataFile": "player_014.mock.json"
+      "dataFile": "player_014.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_015",
@@ -439,16 +212,8 @@
       "notebookAvg": 76.2,
       "hiddenDecisionRate": 0.48,
       "liesDiscovered": 8,
-      "playStyle": "Balanced",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 91,
-        "accuracy": 97,
-        "notebookCompletion": 60,
-        "sessionEfficiency": 48
-      },
-      "dataFile": "player_015.mock.json"
+      "dataFile": "player_015.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_016",
@@ -461,16 +226,8 @@
       "notebookAvg": 63.8,
       "hiddenDecisionRate": 0.24,
       "liesDiscovered": 8,
-      "playStyle": "Speedrunner",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 50,
-        "accuracy": 48,
-        "notebookCompletion": 39,
-        "sessionEfficiency": 80
-      },
-      "dataFile": "player_016.mock.json"
+      "dataFile": "player_016.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_017",
@@ -483,16 +240,8 @@
       "notebookAvg": 69.0,
       "hiddenDecisionRate": 0.18,
       "liesDiscovered": 8,
-      "playStyle": "Speedrunner",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 61,
-        "accuracy": 80,
-        "notebookCompletion": 48,
-        "sessionEfficiency": 83
-      },
-      "dataFile": "player_017.mock.json"
+      "dataFile": "player_017.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_018",
@@ -505,16 +254,8 @@
       "notebookAvg": 66.8,
       "hiddenDecisionRate": 0.84,
       "liesDiscovered": 8,
-      "playStyle": "Manipulator",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 38,
-        "accuracy": 21,
-        "notebookCompletion": 44,
-        "sessionEfficiency": 54
-      },
-      "dataFile": "player_018.mock.json"
+      "dataFile": "player_018.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_019",
@@ -527,16 +268,8 @@
       "notebookAvg": 83.0,
       "hiddenDecisionRate": 0.26,
       "liesDiscovered": 8,
-      "playStyle": "Balanced",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 81,
-        "accuracy": 98,
-        "notebookCompletion": 71,
-        "sessionEfficiency": 23
-      },
-      "dataFile": "player_019.mock.json"
+      "dataFile": "player_019.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_020",
@@ -549,16 +282,8 @@
       "notebookAvg": 73.0,
       "hiddenDecisionRate": 0.51,
       "liesDiscovered": 8,
-      "playStyle": "Balanced",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 68,
-        "accuracy": 60,
-        "notebookCompletion": 55,
-        "sessionEfficiency": 54
-      },
-      "dataFile": "player_020.mock.json"
+      "dataFile": "player_020.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_021",
@@ -571,16 +296,8 @@
       "notebookAvg": 71.0,
       "hiddenDecisionRate": 0.75,
       "liesDiscovered": 8,
-      "playStyle": "Manipulator",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 23,
-        "accuracy": 21,
-        "notebookCompletion": 51,
-        "sessionEfficiency": 53
-      },
-      "dataFile": "player_021.mock.json"
+      "dataFile": "player_021.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_022",
@@ -593,16 +310,8 @@
       "notebookAvg": 70.5,
       "hiddenDecisionRate": 0.8,
       "liesDiscovered": 8,
-      "playStyle": "Manipulator",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 57,
-        "accuracy": 61,
-        "notebookCompletion": 50,
-        "sessionEfficiency": 56
-      },
-      "dataFile": "player_022.mock.json"
+      "dataFile": "player_022.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_023",
@@ -615,17 +324,8 @@
       "notebookAvg": 78.8,
       "hiddenDecisionRate": 0.89,
       "liesDiscovered": 8,
-      "playStyle": "Manipulator",
-      "isOutlier": true,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 86,
-        "accuracy": 72,
-        "notebookCompletion": 64,
-        "sessionEfficiency": 58
-      },
       "dataFile": "player_023.mock.json",
-      "outlierNote": "Outlier: extremadamente alta tasa de ocultación"
+      "abandoned": false
     },
     {
       "id": "player_024",
@@ -638,16 +338,8 @@
       "notebookAvg": 91.8,
       "hiddenDecisionRate": 0.21,
       "liesDiscovered": 12,
-      "playStyle": "Completionist",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 48,
-        "accuracy": 52,
-        "notebookCompletion": 86,
-        "sessionEfficiency": 23
-      },
-      "dataFile": "player_024.mock.json"
+      "dataFile": "player_024.mock.json",
+      "abandoned": false
     },
     {
       "id": "player_025",
@@ -660,16 +352,8 @@
       "notebookAvg": 90.2,
       "hiddenDecisionRate": 0.29,
       "liesDiscovered": 12,
-      "playStyle": "Completionist",
-      "isOutlier": false,
-      "isDrop": false,
-      "percentiles": {
-        "reputation": 50,
-        "accuracy": 25,
-        "notebookCompletion": 83,
-        "sessionEfficiency": 26
-      },
-      "dataFile": "player_025.mock.json"
+      "dataFile": "player_025.mock.json",
+      "abandoned": false
     }
   ]
 }

@@ -13,6 +13,7 @@ import { AnalyticsService } from '../../core/services/analytics.service';
 import { PlayerSummary } from '../../core/models/analytics.model';
 import { StatisticsEngine } from '../../core/engine/statistics.engine';
 import { DecimalPipe } from '@angular/common';
+import { CompareRadarComponent } from '../../shared/organisms/compare-radar/compare-radar.component';
 import { BadgeComponent } from '../../shared/atoms/badge/badge.component';
 import { ProgressBarComponent } from '../../shared/atoms/progress-bar/progress-bar.component';
 
@@ -28,7 +29,7 @@ interface MetricComparison {
 @Component({
   selector: 'df-compare',
   standalone: true,
-  imports: [RouterLink, DecimalPipe, BadgeComponent, ProgressBarComponent],
+  imports: [RouterLink, DecimalPipe, BadgeComponent, ProgressBarComponent, CompareRadarComponent],
   templateUrl: './compare.component.html',
   styleUrls: ['./compare.component.scss']
 })
@@ -42,6 +43,8 @@ export class CompareComponent implements OnInit, OnDestroy {
   readonly isLoading = signal(true);
   readonly error     = signal<string | null>(null);
 
+  // ✅ Field level = injection context (NG0203 fix)
+  private readonly players$ = toObservable(this.analytics.players);
   private sub?: Subscription;
 
   ngOnInit(): void {
@@ -56,7 +59,7 @@ export class CompareComponent implements OnInit, OnDestroy {
       return;
     }
 
-    this.sub = toObservable(this.analytics.players).pipe(
+    this.sub = this.players$.pipe(
       filter(players => players.length > 0),
       take(1)
     ).subscribe(players => {
