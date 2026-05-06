@@ -1,0 +1,22 @@
+[
+  { "id": "first_light",        "name": "Primera luz",         "icon": "🕯️", "secret": false, "desc": "Completa tu primer caso" },
+  { "id": "hawk_eye",           "name": "Ojo de halcón",       "icon": "🔍", "secret": false, "desc": "Encuentra todas las pistas en un caso" },
+  { "id": "full_notebook",      "name": "Cuaderno completo",   "icon": "📓", "secret": false, "desc": "Desbloquea el 100% del cuaderno" },
+  { "id": "exact_justice",      "name": "Justicia exacta",     "icon": "⚖️", "secret": false, "desc": "Identifica correctamente a culpable y cómplice" },
+  { "id": "sealed_lips",        "name": "Boca sellada",        "icon": "🤐", "secret": true,  "desc": "Oculta ambos secretos en el mismo caso" },
+  { "id": "no_net",             "name": "Sin red",             "icon": "🕵️", "secret": false, "desc": "Descubre todas las mentiras del caso" },
+  { "id": "butterfly",          "name": "Efecto mariposa",     "icon": "🦋", "secret": true,  "desc": "Una decisión del pasado cambia el futuro" },
+  { "id": "clean_hands",        "name": "Manos limpias",       "icon": "🧼", "secret": false, "desc": "Completa un caso sin ocultar información" },
+  { "id": "debt_collector",     "name": "Cobrador de deudas",  "icon": "📋", "secret": true,  "desc": "Acumula 3 favores pendientes a tu favor" },
+  { "id": "ghost_detective",    "name": "Detective fantasma",  "icon": "👻", "secret": true,  "desc": "Resuelve un caso sin ser visto por ningún sospechoso" },
+  { "id": "four_aces",          "name": "Cuatro ases",         "icon": "🃏", "secret": false, "desc": "Completa los 4 casos" },
+  { "id": "perfect_record",     "name": "Expediente perfecto", "icon": "🏆", "secret": false, "desc": "Obtén el final A en los 4 casos" },
+  { "id": "web_of_lies",        "name": "Telaraña de mentiras","icon": "🕸️", "secret": false, "desc": "Descubre 10 mentiras en total" },
+  { "id": "long_memory",        "name": "Memoria larga",       "icon": "🧠", "secret": true,  "desc": "Un evento del caso 1 tiene consecuencias en el caso 4" },
+  { "id": "speed_reader",       "name": "Lector rápido",       "icon": "⚡", "secret": false, "desc": "Completa un caso en menos de 30 minutos" },
+  { "id": "night_owl",          "name": "Búho nocturno",       "icon": "🦉", "secret": true,  "desc": "Juega después de las 2am (timestamp real)" },
+  { "id": "double_cross",       "name": "Doble traición",      "icon": "🗡️", "secret": true,  "desc": "Revela a alguien que confió en ti en dos casos seguidos" },
+  { "id": "loose_end",          "name": "Cabo suelto",         "icon": "🧵", "secret": true,  "desc": "Deja una pista sin recoger y aun así resuelves el caso" },
+  { "id": "reputation_zero",    "name": "Reputación cero",     "icon": "📉", "secret": true,  "desc": "Alcanza 0 puntos de reputación" },
+  { "id": "all_secrets",        "name": "Archivador negro",    "icon": "🗂️", "secret": true,  "desc": "Desbloquea todos los logros secretos" }
+]

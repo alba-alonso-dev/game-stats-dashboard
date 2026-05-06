@@ -1,0 +1,918 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "generatedAt": "2024-10-15T22:34:00Z",
+    "note": "Mock data for portfolio dashboard. Game data is fictional and does not reveal real game content."
+  },
+  "player": {
+    "id": "player_001",
+    "name": "Alba",
+    "totalPlaytimeSeconds": 18420,
+    "totalCasesCompleted": 4,
+    "rank": "Senior Detective",
+    "rankLevel": 3,
+    "rankHistory": [
+      {
+        "rank": "Trainee",
+        "achievedAtCase": null
+      },
+      {
+        "rank": "Field Detective",
+        "achievedAtCase": "case_01"
+      },
+      {
+        "rank": "Detective",
+        "achievedAtCase": "case_02"
+      },
+      {
+        "rank": "Senior Detective",
+        "achievedAtCase": "case_04"
+      }
+    ]
+  },
+  "reputation": {
+    "general": 74,
+    "accuracy": 88,
+    "discretion": 55,
+    "relationships": 62,
+    "history": [
+      {
+        "afterCase": "case_01",
+        "general": 85,
+        "accuracy": 90,
+        "discretion": 50,
+        "relationships": 70
+      },
+      {
+        "afterCase": "case_02",
+        "general": 78,
+        "accuracy": 85,
+        "discretion": 60,
+        "relationships": 58
+      },
+      {
+        "afterCase": "case_03",
+        "general": 70,
+        "accuracy": 88,
+        "discretion": 55,
+        "relationships": 60
+      },
+      {
+        "afterCase": "case_04",
+        "general": 74,
+        "accuracy": 88,
+        "discretion": 55,
+        "relationships": 62
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "case_01",
+      "title": "The Hollow Hour",
+      "subtitle": "A death no one saw coming — or so they all claimed.",
+      "status": "completed",
+      "finalId": "A",
+      "finalLabel": "Ascenso confirmado",
+      "finalDescription": "Culpable y cómplice correctamente identificados. Toda la información relevante fue incluida en el informe.",
+      "sessionDurationSeconds": 2820,
+      "report": {
+        "murdererCorrect": true,
+        "accompliceCorrect": true,
+        "hiddenInfoCount": 1,
+        "revealedInfoCount": 1
+      },
+      "suspects": {
+        "total": 7,
+        "interviewed": 7,
+        "liesDiscovered": 2,
+        "liesTotal": 3
+      },
+      "clues": {
+        "collectible": {
+          "found": 2,
+          "total": 2
+        },
+        "interactable": {
+          "found": 2,
+          "total": 2
+        },
+        "shownToSuspects": 3
+      },
+      "roomActions": {
+        "discovered": 6,
+        "total": 6
+      },
+      "notebook": {
+        "completionPercent": 87,
+        "sections": {
+          "characters": {
+            "listPageUnlocked": true,
+            "pages": 7,
+            "pagesUnlocked": 7,
+            "totalUnlockEvents": 12,
+            "unlockedBy": {
+              "talking": 7,
+              "showingClue": 3,
+              "discoveringLie": 2
+            }
+          },
+          "clues": {
+            "pages": 4,
+            "pagesUnlocked": 4
+          },
+          "caseFile": {
+            "pages": 2,
+            "pagesUnlocked": 2,
+            "sectionsComplete": 2,
+            "sectionsTotal": 3
+          }
+        }
+      },
+      "decisions": [
+        {
+          "id": "john_drugs",
+          "character": "John",
+          "info": "Estaba bajo los efectos de sustancias en el momento del crimen",
+          "choice": "hidden",
+          "futureEffect": "john_reliable_witness",
+          "effectDescription": "John se convierte en testigo fiable en casos futuros",
+          "effectValence": "positive"
+        },
+        {
+          "id": "kai_secret",
+          "character": "Kai",
+          "info": "Miembro de una familia influyente; su secreto personal podría arruinarlo",
+          "choice": "revealed",
+          "futureEffect": "kai_hostile",
+          "effectDescription": "Kai y sus contactos están en tu contra",
+          "effectValence": "negative"
+        }
+      ],
+      "timeline": [
+        {
+          "timeSeconds": 180,
+          "type": "exploration",
+          "action": "Escena del crimen inspeccionada"
+        },
+        {
+          "timeSeconds": 420,
+          "type": "interview",
+          "action": "Primeros sospechosos interrogados"
+        },
+        {
+          "timeSeconds": 660,
+          "type": "clue",
+          "action": "Primera pista física encontrada"
+        },
+        {
+          "timeSeconds": 780,
+          "type": "clue",
+          "action": "Pista conversacional desbloqueada"
+        },
+        {
+          "timeSeconds": 1140,
+          "type": "interview",
+          "action": "Todos los sospechosos interrogados"
+        },
+        {
+          "timeSeconds": 1560,
+          "type": "clue",
+          "action": "Segunda pista física encontrada"
+        },
+        {
+          "timeSeconds": 1980,
+          "type": "decision",
+          "action": "Decisión tomada: John — información ocultada"
+        },
+        {
+          "timeSeconds": 2100,
+          "type": "decision",
+          "action": "Decisión tomada: Kai — información revelada"
+        },
+        {
+          "timeSeconds": 2280,
+          "type": "lie",
+          "action": "Mentira descubierta al colocar sospechoso en el informe"
+        },
+        {
+          "timeSeconds": 2820,
+          "type": "report",
+          "action": "Informe enviado — resultado correcto"
+        }
+      ]
+    },
+    {
+      "id": "case_02",
+      "title": "The Velvet Room",
+      "subtitle": "A poisoning in a nightclub. Everyone had a reason. Nobody admits it.",
+      "status": "completed",
+      "finalId": "B",
+      "finalLabel": "Deuda con el crimen organizado",
+      "finalDescription": "Envenenador correctamente identificado. La fuente del veneno fue ocultada para proteger a un contacto, creando una deuda implícita.",
+      "sessionDurationSeconds": 4110,
+      "report": {
+        "murdererCorrect": true,
+        "accompliceCorrect": false,
+        "hiddenInfoCount": 2,
+        "revealedInfoCount": 1
+      },
+      "suspects": {
+        "total": 8,
+        "interviewed": 8,
+        "liesDiscovered": 3,
+        "liesTotal": 4
+      },
+      "clues": {
+        "collectible": {
+          "found": 3,
+          "total": 3
+        },
+        "interactable": {
+          "found": 2,
+          "total": 3
+        },
+        "shownToSuspects": 5
+      },
+      "roomActions": {
+        "discovered": 7,
+        "total": 8
+      },
+      "notebook": {
+        "completionPercent": 79,
+        "sections": {
+          "characters": {
+            "listPageUnlocked": true,
+            "pages": 8,
+            "pagesUnlocked": 8,
+            "totalUnlockEvents": 14,
+            "unlockedBy": {
+              "talking": 8,
+              "showingClue": 4,
+              "discoveringLie": 3
+            }
+          },
+          "clues": {
+            "pages": 6,
+            "pagesUnlocked": 5
+          },
+          "caseFile": {
+            "pages": 2,
+            "pagesUnlocked": 2,
+            "sectionsComplete": 2,
+            "sectionsTotal": 3
+          }
+        }
+      },
+      "decisions": [
+        {
+          "id": "vendor_identity",
+          "character": "Unnamed supplier",
+          "info": "Proveedor de la sustancia utilizada en el envenenamiento",
+          "choice": "hidden",
+          "futureEffect": "crime_org_favor",
+          "effectDescription": "Una organización influyente te debe un favor discreto",
+          "effectValence": "ambiguous"
+        },
+        {
+          "id": "hostess_alibi",
+          "character": "Mireille",
+          "info": "Coartada fabricada; sabe más de lo que dice pero no es la asesina",
+          "choice": "hidden",
+          "futureEffect": "mireille_informant",
+          "effectDescription": "Mireille aparece como informante útil en el caso 3",
+          "effectValence": "positive"
+        },
+        {
+          "id": "manager_bribe",
+          "character": "Renzo",
+          "info": "El gerente aceptó sobornos para mirar hacia otro lado la noche del crimen",
+          "choice": "revealed",
+          "futureEffect": "renzo_jailed",
+          "effectDescription": "Renzo es procesado; el local cierra y un testigo clave ya no está disponible",
+          "effectValence": "negative"
+        }
+      ],
+      "timeline": [
+        {
+          "timeSeconds": 210,
+          "type": "exploration",
+          "action": "Club inspeccionado antes de apertura"
+        },
+        {
+          "timeSeconds": 600,
+          "type": "clue",
+          "action": "Vaso con residuos tóxicos encontrado"
+        },
+        {
+          "timeSeconds": 950,
+          "type": "interview",
+          "action": "Personal del club interrogado"
+        },
+        {
+          "timeSeconds": 1300,
+          "type": "clue",
+          "action": "Lista de reservas con nombre falso descubierta"
+        },
+        {
+          "timeSeconds": 1800,
+          "type": "lie",
+          "action": "Coartada de sospechoso contradice prueba física"
+        },
+        {
+          "timeSeconds": 2200,
+          "type": "interview",
+          "action": "Segunda ronda de interrogatorios"
+        },
+        {
+          "timeSeconds": 2700,
+          "type": "decision",
+          "action": "Proveedor — información ocultada"
+        },
+        {
+          "timeSeconds": 3000,
+          "type": "decision",
+          "action": "Mireille — información ocultada"
+        },
+        {
+          "timeSeconds": 3400,
+          "type": "decision",
+          "action": "Renzo — información revelada"
+        },
+        {
+          "timeSeconds": 4110,
+          "type": "report",
+          "action": "Informe enviado — asesino correcto, cómplice no identificado"
+        }
+      ]
+    },
+    {
+      "id": "case_03",
+      "title": "Cold Frame",
+      "subtitle": "A body found inside a prestigious gallery. The real masterpiece was the cover-up.",
+      "status": "completed",
+      "finalId": "C",
+      "finalLabel": "Asesino escapado",
+      "finalDescription": "La obra robada fue recuperada y la red de falsificación parcialmente expuesta. Sin embargo, el autor del homicidio logró escapar antes del arresto.",
+      "sessionDurationSeconds": 5640,
+      "report": {
+        "murdererCorrect": false,
+        "accompliceCorrect": true,
+        "hiddenInfoCount": 1,
+        "revealedInfoCount": 2
+      },
+      "suspects": {
+        "total": 9,
+        "interviewed": 9,
+        "liesDiscovered": 4,
+        "liesTotal": 5
+      },
+      "clues": {
+        "collectible": {
+          "found": 4,
+          "total": 4
+        },
+        "interactable": {
+          "found": 3,
+          "total": 4
+        },
+        "shownToSuspects": 6
+      },
+      "roomActions": {
+        "discovered": 8,
+        "total": 9
+      },
+      "notebook": {
+        "completionPercent": 83,
+        "sections": {
+          "characters": {
+            "listPageUnlocked": true,
+            "pages": 9,
+            "pagesUnlocked": 9,
+            "totalUnlockEvents": 17,
+            "unlockedBy": {
+              "talking": 9,
+              "showingClue": 5,
+              "discoveringLie": 4
+            }
+          },
+          "clues": {
+            "pages": 8,
+            "pagesUnlocked": 7
+          },
+          "caseFile": {
+            "pages": 2,
+            "pagesUnlocked": 2,
+            "sectionsComplete": 3,
+            "sectionsTotal": 3
+          }
+        }
+      },
+      "decisions": [
+        {
+          "id": "forger_contact",
+          "character": "Elsa",
+          "info": "Restauradora que sabía que varias obras del museo eran falsificaciones; no participó en el crimen",
+          "choice": "hidden",
+          "futureEffect": "elsa_witness",
+          "effectDescription": "Elsa puede testificar en el caso 4 sobre documentos falsificados",
+          "effectValence": "positive"
+        },
+        {
+          "id": "collector_fraud",
+          "character": "Marchetti",
+          "info": "Coleccionista implicado en blanqueo a través del arte",
+          "choice": "revealed",
+          "futureEffect": "marchetti_investigated",
+          "effectDescription": "Marchetti es investigado; su red se contrae pero no desaparece",
+          "effectValence": "ambiguous"
+        },
+        {
+          "id": "guard_negligence",
+          "character": "Tobias",
+          "info": "El guardia de seguridad abandonó su puesto por razones personales",
+          "choice": "revealed",
+          "futureEffect": "tobias_fired",
+          "effectDescription": "Tobias pierde su empleo; su sustituta facilita acceso en el caso 4",
+          "effectValence": "ambiguous"
+        }
+      ],
+      "timeline": [
+        {
+          "timeSeconds": 300,
+          "type": "exploration",
+          "action": "Galería cerrada al público — inspección inicial"
+        },
+        {
+          "timeSeconds": 720,
+          "type": "clue",
+          "action": "Marco vacío encontrado — obra desaparecida"
+        },
+        {
+          "timeSeconds": 1100,
+          "type": "interview",
+          "action": "Curador y personal interrogados"
+        },
+        {
+          "timeSeconds": 1600,
+          "type": "clue",
+          "action": "Certificado de autenticidad falsificado descubierto"
+        },
+        {
+          "timeSeconds": 2200,
+          "type": "lie",
+          "action": "Declaración del asistente contradice grabación de seguridad"
+        },
+        {
+          "timeSeconds": 2900,
+          "type": "clue",
+          "action": "Herramienta de encuadre con huellas encontrada"
+        },
+        {
+          "timeSeconds": 3500,
+          "type": "interview",
+          "action": "Interrogatorio de coleccionistas presentes en la inauguración"
+        },
+        {
+          "timeSeconds": 4200,
+          "type": "lie",
+          "action": "Segunda mentira descubierta — horario de cierre manipulado"
+        },
+        {
+          "timeSeconds": 4900,
+          "type": "decision",
+          "action": "Elsa — información ocultada"
+        },
+        {
+          "timeSeconds": 5100,
+          "type": "decision",
+          "action": "Marchetti — información revelada"
+        },
+        {
+          "timeSeconds": 5300,
+          "type": "decision",
+          "action": "Tobias — información revelada"
+        },
+        {
+          "timeSeconds": 5640,
+          "type": "report",
+          "action": "Informe enviado — cómplice correcto, asesino escapado"
+        }
+      ]
+    },
+    {
+      "id": "case_04",
+      "title": "Last Signal",
+      "subtitle": "A journalist found dead before publishing a story that could bring down careers.",
+      "status": "completed",
+      "finalId": "A",
+      "finalLabel": "Fin heroico",
+      "finalDescription": "La conspiración fue completamente expuesta. La fuente del periodista permanece protegida. Ascenso al rango máximo.",
+      "sessionDurationSeconds": 5850,
+      "report": {
+        "murdererCorrect": true,
+        "accompliceCorrect": true,
+        "hiddenInfoCount": 1,
+        "revealedInfoCount": 3
+      },
+      "suspects": {
+        "total": 10,
+        "interviewed": 10,
+        "liesDiscovered": 5,
+        "liesTotal": 6
+      },
+      "clues": {
+        "collectible": {
+          "found": 5,
+          "total": 5
+        },
+        "interactable": {
+          "found": 4,
+          "total": 4
+        },
+        "shownToSuspects": 8
+      },
+      "roomActions": {
+        "discovered": 9,
+        "total": 10
+      },
+      "notebook": {
+        "completionPercent": 94,
+        "sections": {
+          "characters": {
+            "listPageUnlocked": true,
+            "pages": 10,
+            "pagesUnlocked": 10,
+            "totalUnlockEvents": 22,
+            "unlockedBy": {
+              "talking": 10,
+              "showingClue": 7,
+              "discoveringLie": 5
+            }
+          },
+          "clues": {
+            "pages": 9,
+            "pagesUnlocked": 9
+          },
+          "caseFile": {
+            "pages": 2,
+            "pagesUnlocked": 2,
+            "sectionsComplete": 3,
+            "sectionsTotal": 3
+          }
+        }
+      },
+      "decisions": [
+        {
+          "id": "source_identity",
+          "character": "Source X",
+          "info": "Identidad real de la fuente del periodista — funcionario de alto rango",
+          "choice": "hidden",
+          "futureEffect": "source_protected",
+          "effectDescription": "La fuente sigue operativa; posible aliado en hipotéticos casos futuros",
+          "effectValence": "positive"
+        },
+        {
+          "id": "politician_blackmail",
+          "character": "Alcott",
+          "info": "El político estaba siendo chantajeado y pagó para que el periodista guardara silencio",
+          "choice": "revealed",
+          "futureEffect": "alcott_resigned",
+          "effectDescription": "Alcott dimite; la trama queda expuesta públicamente",
+          "effectValence": "positive"
+        },
+        {
+          "id": "editor_complicity",
+          "character": "Voss",
+          "info": "El editor del medio sabía del riesgo y no actuó para proteger al periodista",
+          "choice": "revealed",
+          "futureEffect": "voss_prosecuted",
+          "effectDescription": "Voss es procesado por omisión del deber",
+          "effectValence": "positive"
+        },
+        {
+          "id": "archive_leak",
+          "character": "N/A — documento interno",
+          "info": "Archivo filtrado con operaciones encubiertas no relacionadas con el caso",
+          "choice": "revealed",
+          "futureEffect": "internal_investigation",
+          "effectDescription": "Se abre una investigación interna en el departamento",
+          "effectValence": "ambiguous"
+        }
+      ],
+      "carryoverEffects": [
+        {
+          "sourceCase": "case_01",
+          "decisionId": "john_drugs",
+          "effect": "John proporcionó testimonio clave sin contradecirse",
+          "impact": "positive"
+        },
+        {
+          "sourceCase": "case_02",
+          "decisionId": "hostess_alibi",
+          "effect": "Mireille facilitó acceso a documentos del club en la investigación",
+          "impact": "positive"
+        },
+        {
+          "sourceCase": "case_03",
+          "decisionId": "forger_contact",
+          "effect": "Elsa identificó documentos falsificados en el entorno del periodista",
+          "impact": "positive"
+        },
+        {
+          "sourceCase": "case_01",
+          "decisionId": "kai_secret",
+          "effect": "Contacto de Kai intentó entorpecer el acceso a ciertos registros",
+          "impact": "negative"
+        }
+      ],
+      "timeline": [
+        {
+          "timeSeconds": 240,
+          "type": "exploration",
+          "action": "Estudio del periodista inspeccionado"
+        },
+        {
+          "timeSeconds": 700,
+          "type": "clue",
+          "action": "Disco duro cifrado encontrado"
+        },
+        {
+          "timeSeconds": 1100,
+          "type": "interview",
+          "action": "Colegas del periodista interrogados"
+        },
+        {
+          "timeSeconds": 1500,
+          "type": "clue",
+          "action": "Copia de seguridad en dispositivo externo hallada"
+        },
+        {
+          "timeSeconds": 2000,
+          "type": "lie",
+          "action": "Editor miente sobre la última comunicación con la víctima"
+        },
+        {
+          "timeSeconds": 2400,
+          "type": "interview",
+          "action": "Funcionarios implicados interrogados"
+        },
+        {
+          "timeSeconds": 2900,
+          "type": "lie",
+          "action": "Agenda del político tiene huecos no justificados"
+        },
+        {
+          "timeSeconds": 3400,
+          "type": "clue",
+          "action": "Correo cifrado vincula al chantajista con el asesino"
+        },
+        {
+          "timeSeconds": 4000,
+          "type": "lie",
+          "action": "Tres mentiras más descubiertas en interrogatorio cruzado"
+        },
+        {
+          "timeSeconds": 4600,
+          "type": "decision",
+          "action": "Fuente — identidad ocultada"
+        },
+        {
+          "timeSeconds": 4900,
+          "type": "decision",
+          "action": "Alcott — información revelada"
+        },
+        {
+          "timeSeconds": 5100,
+          "type": "decision",
+          "action": "Voss — información revelada"
+        },
+        {
+          "timeSeconds": 5350,
+          "type": "decision",
+          "action": "Archivo — información revelada"
+        },
+        {
+          "timeSeconds": 5850,
+          "type": "report",
+          "action": "Informe enviado — resultado perfecto"
+        }
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "id": "first_light",
+      "name": "Primera luz",
+      "description": "Completa tu primer caso",
+      "icon": "🕯️",
+      "secret": false,
+      "unlocked": true,
+      "unlockedAtCase": "case_01",
+      "condition": "cases.completed >= 1"
+    },
+    {
+      "id": "hawk_eye",
+      "name": "Ojo de halcón",
+      "description": "Encuentra todas las pistas recogibles e interactuables en un mismo caso",
+      "icon": "🔍",
+      "secret": false,
+      "unlocked": true,
+      "unlockedAtCase": "case_01",
+      "condition": "clues.collectible.found == total && clues.interactable.found == total"
+    },
+    {
+      "id": "full_notebook",
+      "name": "Cuaderno completo",
+      "description": "Desbloquea el 100% del cuaderno de investigación en un caso",
+      "icon": "📓",
+      "secret": false,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "notebook.completionPercent == 100"
+    },
+    {
+      "id": "exact_justice",
+      "name": "Justicia exacta",
+      "description": "Identifica correctamente al asesino y al cómplice en el mismo informe",
+      "icon": "⚖️",
+      "secret": false,
+      "unlocked": true,
+      "unlockedAtCase": "case_01",
+      "condition": "report.murdererCorrect && report.accompliceCorrect"
+    },
+    {
+      "id": "sealed_lips",
+      "name": "Boca sellada",
+      "description": "Oculta todas las informaciones sensibles en un mismo caso",
+      "icon": "🤐",
+      "secret": true,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "decisions.every(d => d.choice == 'hidden')"
+    },
+    {
+      "id": "no_net",
+      "name": "Sin red",
+      "description": "Descubre todas las mentiras activas de un caso",
+      "icon": "🕵️",
+      "secret": false,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "suspects.liesDiscovered == suspects.liesTotal"
+    },
+    {
+      "id": "butterfly",
+      "name": "Efecto mariposa",
+      "description": "Una decisión tomada en el pasado cambia activamente el curso de otro caso",
+      "icon": "🦋",
+      "secret": true,
+      "unlocked": true,
+      "unlockedAtCase": "case_04",
+      "condition": "carryoverEffects.length > 0"
+    },
+    {
+      "id": "clean_hands",
+      "name": "Manos limpias",
+      "description": "Completa un caso revelando toda la información sin omitir nada",
+      "icon": "🧼",
+      "secret": false,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "decisions.every(d => d.choice == 'revealed')"
+    },
+    {
+      "id": "debt_collector",
+      "name": "Cobrador de deudas",
+      "description": "Acumula al menos 3 efectos futuros positivos activos al mismo tiempo",
+      "icon": "📋",
+      "secret": true,
+      "unlocked": true,
+      "unlockedAtCase": "case_04",
+      "condition": "activePositiveEffects >= 3"
+    },
+    {
+      "id": "ghost_detective",
+      "name": "Detective fantasma",
+      "description": "Resuelve un caso sin mostrar ninguna pista física a ningún sospechoso",
+      "icon": "👻",
+      "secret": true,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "clues.shownToSuspects == 0 && report.murdererCorrect"
+    },
+    {
+      "id": "four_aces",
+      "name": "Cuatro ases",
+      "description": "Completa los cuatro casos",
+      "icon": "🃏",
+      "secret": false,
+      "unlocked": true,
+      "unlockedAtCase": "case_04",
+      "condition": "cases.completed == 4"
+    },
+    {
+      "id": "perfect_record",
+      "name": "Expediente perfecto",
+      "description": "Obtén el Final A en los cuatro casos",
+      "icon": "🏆",
+      "secret": false,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "cases.every(c => c.finalId == 'A')"
+    },
+    {
+      "id": "web_of_lies",
+      "name": "Telaraña de mentiras",
+      "description": "Descubre un total de 10 mentiras a lo largo de todos los casos",
+      "icon": "🕸️",
+      "secret": false,
+      "unlocked": true,
+      "unlockedAtCase": "case_04",
+      "condition": "totalLiesDiscovered >= 10"
+    },
+    {
+      "id": "long_memory",
+      "name": "Memoria larga",
+      "description": "Una decisión del Caso 1 tiene consecuencias directas en el Caso 4",
+      "icon": "🧠",
+      "secret": true,
+      "unlocked": true,
+      "unlockedAtCase": "case_04",
+      "condition": "carryoverEffects.some(e => e.sourceCase == 'case_01') && currentCase == 'case_04'"
+    },
+    {
+      "id": "speed_reader",
+      "name": "Lector rápido",
+      "description": "Completa un caso en menos de 30 minutos",
+      "icon": "⚡",
+      "secret": false,
+      "unlocked": true,
+      "unlockedAtCase": "case_01",
+      "condition": "sessionDurationSeconds < 1800"
+    },
+    {
+      "id": "night_owl",
+      "name": "Búho nocturno",
+      "description": "Envía un informe pasadas las 2:00 AM (hora local)",
+      "icon": "🦉",
+      "secret": true,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "reportSubmittedHour >= 2 && reportSubmittedHour < 5"
+    },
+    {
+      "id": "double_cross",
+      "name": "Doble traición",
+      "description": "Revela información de alguien que confió en ti en dos casos consecutivos",
+      "icon": "🗡️",
+      "secret": true,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "consecutiveCasesWithBetrayal >= 2"
+    },
+    {
+      "id": "loose_end",
+      "name": "Cabo suelto",
+      "description": "Resuelve correctamente un caso sin haber encontrado todas las pistas interactuables",
+      "icon": "🧵",
+      "secret": true,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "clues.interactable.found < clues.interactable.total && report.murdererCorrect"
+    },
+    {
+      "id": "reputation_zero",
+      "name": "Reputación cero",
+      "description": "Alcanza 0 puntos de reputación general",
+      "icon": "📉",
+      "secret": true,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "reputation.general == 0"
+    },
+    {
+      "id": "all_secrets",
+      "name": "Archivador negro",
+      "description": "Desbloquea todos los logros secretos",
+      "icon": "🗂️",
+      "secret": true,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "achievements.filter(a => a.secret).every(a => a.unlocked)"
+    }
+  ],
+  "globalStats": {
+    "totalLiesDiscovered": 14,
+    "totalLiesTotal": 18,
+    "totalCluesFound": 16,
+    "totalCluesAvailable": 18,
+    "totalSuspectsInterviewed": 34,
+    "totalDecisionsMade": 10,
+    "totalHidden": 4,
+    "totalRevealed": 6,
+    "positiveCarryoverEffects": 4,
+    "negativeCarryoverEffects": 2,
+    "notebookAverage": 85.75
+  }
+}

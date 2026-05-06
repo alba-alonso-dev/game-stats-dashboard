@@ -1,0 +1,558 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "generatedAt": "2024-10-15T22:34:00Z",
+    "note": "Mock player data"
+  },
+  "player": {
+    "id": "player_008",
+    "name": "Miren",
+    "totalPlaytimeSeconds": 11362,
+    "totalCasesCompleted": 3,
+    "rank": "Senior Detective",
+    "rankLevel": 3,
+    "rankHistory": [
+      {
+        "rank": "Trainee",
+        "achievedAtCase": "case_01"
+      },
+      {
+        "rank": "Field Detective",
+        "achievedAtCase": "case_02"
+      },
+      {
+        "rank": "Detective",
+        "achievedAtCase": "case_03"
+      },
+      {
+        "rank": "Senior Detective",
+        "achievedAtCase": "case_04"
+      }
+    ]
+  },
+  "reputation": {
+    "general": 86,
+    "accuracy": 99,
+    "discretion": 44,
+    "relationships": 90,
+    "history": [
+      {
+        "afterCase": "case_01",
+        "general": 88,
+        "accuracy": 98,
+        "discretion": 44,
+        "relationships": 88
+      },
+      {
+        "afterCase": "case_02",
+        "general": 90,
+        "accuracy": 90,
+        "discretion": 44,
+        "relationships": 81
+      },
+      {
+        "afterCase": "case_03",
+        "general": 95,
+        "accuracy": 90,
+        "discretion": 44,
+        "relationships": 90
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "case_01",
+      "title": "The Hollow Hour",
+      "subtitle": "A death no one saw coming — or so they all claimed.",
+      "status": "completed",
+      "finalId": "B",
+      "finalLabel": "Deuda con el crimen organizado",
+      "finalDescription": "Resolución del caso: Deuda con el crimen organizado.",
+      "sessionDurationSeconds": 3696,
+      "report": {
+        "murdererCorrect": true,
+        "accompliceCorrect": false,
+        "hiddenInfoCount": 2,
+        "revealedInfoCount": 0
+      },
+      "suspects": {
+        "total": 7,
+        "interviewed": 7,
+        "liesDiscovered": 2,
+        "liesTotal": 2
+      },
+      "clues": {
+        "collectible": {
+          "found": 1,
+          "total": 2
+        },
+        "interactable": {
+          "found": 1,
+          "total": 2
+        },
+        "shownToSuspects": 3
+      },
+      "roomActions": {
+        "discovered": 5,
+        "total": 5
+      },
+      "notebook": {
+        "completionPercent": 90,
+        "sections": {
+          "characters": {
+            "listPageUnlocked": true,
+            "pages": 7,
+            "pagesUnlocked": 6,
+            "totalUnlockEvents": 6,
+            "unlockedBy": {
+              "talking": 6,
+              "showingClue": 2,
+              "discoveringLie": 2
+            }
+          },
+          "clues": {
+            "pages": 2,
+            "pagesUnlocked": 2
+          },
+          "caseFile": {
+            "pages": 2,
+            "pagesUnlocked": 2,
+            "sectionsComplete": 2,
+            "sectionsTotal": 3
+          }
+        }
+      },
+      "decisions": [
+        {
+          "id": "kai_secret",
+          "character": "Kai",
+          "info": "Miembro de una familia influyente; su secreto personal podría arruinarlo",
+          "choice": "revealed",
+          "futureEffect": "kai_hostile",
+          "effectDescription": "Kai y sus contactos están en tu contra",
+          "effectValence": "negative"
+        },
+        {
+          "id": "john_drugs",
+          "character": "John",
+          "info": "Estaba bajo los efectos de sustancias en el momento del crimen",
+          "choice": "revealed",
+          "futureEffect": "john_hostile",
+          "effectDescription": "John está en tu contra en casos futuros",
+          "effectValence": "negative"
+        }
+      ],
+      "timeline": [
+        {
+          "timeSeconds": 206,
+          "type": "exploration",
+          "action": "Escena del crimen inspeccionada"
+        },
+        {
+          "timeSeconds": 482,
+          "type": "interview",
+          "action": "Primeros sospechosos interrogados"
+        },
+        {
+          "timeSeconds": 758,
+          "type": "clue",
+          "action": "Primera pista física encontrada"
+        },
+        {
+          "timeSeconds": 1033,
+          "type": "clue",
+          "action": "Pista conversacional desbloqueada"
+        },
+        {
+          "timeSeconds": 1378,
+          "type": "interview",
+          "action": "Segunda ronda de interrogatorios"
+        },
+        {
+          "timeSeconds": 1792,
+          "type": "clue",
+          "action": "Segunda pista física encontrada"
+        },
+        {
+          "timeSeconds": 2274,
+          "type": "decision",
+          "action": "Primera decisión tomada"
+        },
+        {
+          "timeSeconds": 2619,
+          "type": "lie",
+          "action": "Mentira descubierta al colocar sospechoso"
+        },
+        {
+          "timeSeconds": 3239,
+          "type": "report",
+          "action": "Informe enviado"
+        }
+      ]
+    },
+    {
+      "id": "case_02",
+      "title": "The Velvet Room",
+      "subtitle": "A poisoning in a nightclub. Everyone had a reason.",
+      "status": "completed",
+      "finalId": "B",
+      "finalLabel": "Deuda con el crimen organizado",
+      "finalDescription": "Resolución del caso: Deuda con el crimen organizado.",
+      "sessionDurationSeconds": 4009,
+      "report": {
+        "murdererCorrect": true,
+        "accompliceCorrect": false,
+        "hiddenInfoCount": 1,
+        "revealedInfoCount": 1
+      },
+      "suspects": {
+        "total": 8,
+        "interviewed": 8,
+        "liesDiscovered": 3,
+        "liesTotal": 3
+      },
+      "clues": {
+        "collectible": {
+          "found": 1,
+          "total": 2
+        },
+        "interactable": {
+          "found": 1,
+          "total": 2
+        },
+        "shownToSuspects": 4
+      },
+      "roomActions": {
+        "discovered": 6,
+        "total": 6
+      },
+      "notebook": {
+        "completionPercent": 83,
+        "sections": {
+          "characters": {
+            "listPageUnlocked": true,
+            "pages": 8,
+            "pagesUnlocked": 6,
+            "totalUnlockEvents": 6,
+            "unlockedBy": {
+              "talking": 6,
+              "showingClue": 3,
+              "discoveringLie": 3
+            }
+          },
+          "clues": {
+            "pages": 2,
+            "pagesUnlocked": 2
+          },
+          "caseFile": {
+            "pages": 2,
+            "pagesUnlocked": 2,
+            "sectionsComplete": 2,
+            "sectionsTotal": 3
+          }
+        }
+      },
+      "decisions": [
+        {
+          "id": "vendor_identity",
+          "character": "Proveedor anónimo",
+          "info": "Proveedor de la sustancia utilizada en el envenenamiento",
+          "choice": "revealed",
+          "futureEffect": "vendor_arrested",
+          "effectDescription": "El proveedor es detenido; la red se debilita",
+          "effectValence": "positive"
+        },
+        {
+          "id": "john_drugs",
+          "character": "John",
+          "info": "Estaba bajo los efectos de sustancias en el momento del crimen",
+          "choice": "hidden",
+          "futureEffect": "john_reliable_witness",
+          "effectDescription": "John se convierte en testigo fiable",
+          "effectValence": "positive"
+        }
+      ],
+      "timeline": [
+        {
+          "timeSeconds": 157,
+          "type": "exploration",
+          "action": "Escena del crimen inspeccionada"
+        },
+        {
+          "timeSeconds": 367,
+          "type": "interview",
+          "action": "Primeros sospechosos interrogados"
+        },
+        {
+          "timeSeconds": 577,
+          "type": "clue",
+          "action": "Primera pista física encontrada"
+        },
+        {
+          "timeSeconds": 787,
+          "type": "clue",
+          "action": "Pista conversacional desbloqueada"
+        },
+        {
+          "timeSeconds": 1049,
+          "type": "interview",
+          "action": "Segunda ronda de interrogatorios"
+        },
+        {
+          "timeSeconds": 1364,
+          "type": "clue",
+          "action": "Segunda pista física encontrada"
+        },
+        {
+          "timeSeconds": 1732,
+          "type": "decision",
+          "action": "Primera decisión tomada"
+        },
+        {
+          "timeSeconds": 1994,
+          "type": "lie",
+          "action": "Mentira descubierta al colocar sospechoso"
+        },
+        {
+          "timeSeconds": 2467,
+          "type": "report",
+          "action": "Informe enviado"
+        }
+      ]
+    },
+    {
+      "id": "case_03",
+      "title": "Cold Frame",
+      "subtitle": "A body found inside a prestigious gallery.",
+      "status": "completed",
+      "finalId": "A",
+      "finalLabel": "Ascenso confirmado",
+      "finalDescription": "Resolución del caso: Ascenso confirmado.",
+      "sessionDurationSeconds": 3657,
+      "report": {
+        "murdererCorrect": true,
+        "accompliceCorrect": true,
+        "hiddenInfoCount": 1,
+        "revealedInfoCount": 0
+      },
+      "suspects": {
+        "total": 9,
+        "interviewed": 9,
+        "liesDiscovered": 4,
+        "liesTotal": 4
+      },
+      "clues": {
+        "collectible": {
+          "found": 2,
+          "total": 3
+        },
+        "interactable": {
+          "found": 2,
+          "total": 3
+        },
+        "shownToSuspects": 4
+      },
+      "roomActions": {
+        "discovered": 7,
+        "total": 7
+      },
+      "notebook": {
+        "completionPercent": 78,
+        "sections": {
+          "characters": {
+            "listPageUnlocked": true,
+            "pages": 9,
+            "pagesUnlocked": 7,
+            "totalUnlockEvents": 7,
+            "unlockedBy": {
+              "talking": 7,
+              "showingClue": 2,
+              "discoveringLie": 4
+            }
+          },
+          "clues": {
+            "pages": 4,
+            "pagesUnlocked": 4
+          },
+          "caseFile": {
+            "pages": 2,
+            "pagesUnlocked": 2,
+            "sectionsComplete": 3,
+            "sectionsTotal": 3
+          }
+        }
+      },
+      "decisions": [
+        {
+          "id": "hostess_alibi",
+          "character": "Mireille",
+          "info": "Coartada fabricada; sabe más de lo que dice pero no es la asesina",
+          "choice": "revealed",
+          "futureEffect": "mireille_hostile",
+          "effectDescription": "Mireille se niega a cooperar en el futuro",
+          "effectValence": "negative"
+        },
+        {
+          "id": "vendor_identity",
+          "character": "Proveedor anónimo",
+          "info": "Proveedor de la sustancia utilizada en el envenenamiento",
+          "choice": "revealed",
+          "futureEffect": "vendor_arrested",
+          "effectDescription": "El proveedor es detenido; la red se debilita",
+          "effectValence": "positive"
+        },
+        {
+          "id": "john_drugs",
+          "character": "John",
+          "info": "Estaba bajo los efectos de sustancias en el momento del crimen",
+          "choice": "hidden",
+          "futureEffect": "john_reliable_witness",
+          "effectDescription": "John se convierte en testigo fiable",
+          "effectValence": "positive"
+        }
+      ],
+      "timeline": [
+        {
+          "timeSeconds": 132,
+          "type": "exploration",
+          "action": "Escena del crimen inspeccionada"
+        },
+        {
+          "timeSeconds": 308,
+          "type": "interview",
+          "action": "Primeros sospechosos interrogados"
+        },
+        {
+          "timeSeconds": 485,
+          "type": "clue",
+          "action": "Primera pista física encontrada"
+        },
+        {
+          "timeSeconds": 661,
+          "type": "clue",
+          "action": "Pista conversacional desbloqueada"
+        },
+        {
+          "timeSeconds": 882,
+          "type": "interview",
+          "action": "Segunda ronda de interrogatorios"
+        },
+        {
+          "timeSeconds": 1147,
+          "type": "clue",
+          "action": "Segunda pista física encontrada"
+        },
+        {
+          "timeSeconds": 1456,
+          "type": "decision",
+          "action": "Primera decisión tomada"
+        },
+        {
+          "timeSeconds": 1676,
+          "type": "lie",
+          "action": "Mentira descubierta al colocar sospechoso"
+        },
+        {
+          "timeSeconds": 2073,
+          "type": "report",
+          "action": "Informe enviado"
+        }
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "id": "first_light",
+      "name": "Primera luz",
+      "description": "Completa tu primer caso",
+      "icon": "🕯️",
+      "secret": false,
+      "unlocked": true,
+      "unlockedAtCase": "case_01",
+      "condition": "cases.completed >= 1"
+    },
+    {
+      "id": "hawk_eye",
+      "name": "Ojo de halcón",
+      "description": "Encuentra todas las pistas",
+      "icon": "🔍",
+      "secret": false,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "clues.all"
+    },
+    {
+      "id": "four_aces",
+      "name": "Cuatro ases",
+      "description": "Completa los cuatro casos",
+      "icon": "🃏",
+      "secret": false,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "cases.completed == 4"
+    },
+    {
+      "id": "exact_justice",
+      "name": "Justicia exacta",
+      "description": "Asesino y cómplice correctos",
+      "icon": "⚖️",
+      "secret": false,
+      "unlocked": true,
+      "unlockedAtCase": "case_03",
+      "condition": "report.both_correct"
+    },
+    {
+      "id": "butterfly",
+      "name": "Efecto mariposa",
+      "description": "Una decisión cambia el futuro",
+      "icon": "🦋",
+      "secret": true,
+      "unlocked": true,
+      "unlockedAtCase": "case_02",
+      "condition": "carryover"
+    },
+    {
+      "id": "sealed_lips",
+      "name": "Boca sellada",
+      "description": "Oculta todo en un caso",
+      "icon": "🤐",
+      "secret": true,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "all_hidden"
+    },
+    {
+      "id": "speed_reader",
+      "name": "Lector rápido",
+      "description": "Termina un caso en menos de 30m",
+      "icon": "⚡",
+      "secret": false,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "session<1800"
+    },
+    {
+      "id": "full_notebook",
+      "name": "Cuaderno completo",
+      "description": "100% del cuaderno",
+      "icon": "📓",
+      "secret": false,
+      "unlocked": false,
+      "unlockedAtCase": null,
+      "condition": "notebook==100"
+    }
+  ],
+  "globalStats": {
+    "totalLiesDiscovered": 5,
+    "totalLiesTotal": 9,
+    "totalCluesFound": 8,
+    "totalCluesAvailable": 14,
+    "totalSuspectsInterviewed": 24,
+    "totalDecisionsMade": 7,
+    "totalHidden": 3,
+    "totalRevealed": 4,
+    "positiveCarryoverEffects": 3,
+    "negativeCarryoverEffects": 1,
+    "notebookAverage": 80.7
+  }
+}
