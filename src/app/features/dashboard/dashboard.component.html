@@ -50,6 +50,12 @@
             Post-investigation analytics — {{ player()!.name }}
           </p>
         </div>
+        <a [routerLink]="['/compare', player()!.id, 'none']"
+          class="dashboard__compare-btn"
+          title="Compare with another detective" >
+          ⇄ Compare
+        </a>
+
         <div class="dashboard__header-badge">
           <span class="dashboard__status-dot"></span>
           <span class="dashboard__status-text">Mock data · 4 cases</span>

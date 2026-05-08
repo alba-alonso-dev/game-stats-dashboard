@@ -19,6 +19,13 @@ export const routes: Routes = [
       import('./features/compare/compare.component')
         .then(m => m.CompareComponent)
   },
+  // Entry point — opens with empty slots, user picks both players
+  {
+    path: 'compare',
+    loadComponent: () =>
+      import('./features/compare/compare.component')
+        .then(m => m.CompareComponent)
+  },
   {
     path: 'methodology',
     loadComponent: () =>
